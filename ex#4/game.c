@@ -3,8 +3,10 @@
 
 void gameManager(void)
 {
+    char cmd = 'm';
     int TI = 1, TJ = 1;
     char area[MAX_I][MAX_J];
+    char *moveComand = &cmd;
     int *playerI = &TI;
     int *playerJ = &TJ;
 
@@ -51,4 +53,13 @@ void displayArea(char area[][MAX_J])
             }
         }
     }printf("\n");
+}
+
+////////////////////////////////////////////////////////////
+
+void displayMenu(char *moveComand){
+    printf("move the 'T':\n");
+    printf("z : up\n" "s : down\n" "q : left\n" " d : right\n");
+    printf(">");
+    scanf("%c", moveComand);
 }

@@ -16,6 +16,7 @@
 void gameManager(void);
 void areaInitialisation( char area[][MAX_J], int *playerI, int *playerJ);
 void displayArea(char area[][MAX_J]);
+void displayMenu(char *moveComand);
 
 //////////////////////////////////////
 
