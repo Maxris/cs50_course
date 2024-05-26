@@ -9,14 +9,14 @@ void gameManager(void)
     int *playerJ = &TJ;
 
     areaInitialisation(area, playerI, playerJ);
-
+    displayArea(area);
 }
 
 
 ////////////////////////////////////////////////////////////
 
 
-void areaInitialisation( char area[][MAX_J], int *playerI, *playerJ)
+void areaInitialisation( char area[][MAX_J], int *playerI, int *playerJ)
 {
     for( int i = 0; i < MAX_I; i++)
     {
@@ -36,21 +36,19 @@ void areaInitialisation( char area[][MAX_J], int *playerI, *playerJ)
 
 ////////////////////////////////////////////////////////////
 
-void displayArea(char area)
+void displayArea(char area[][MAX_J])
 {
     printf("\n");
-    for( int i = 0; i < MAX_I; i++)
+    for(int i = 0; i < MAX_I; i++)
     {
         for(int j = 0; j < MAX_J; j++)
         {
             if(j == 0 && i > 0)
             {
-                printf("\n%c",area[i][j]);
+                printf("\n%c", area[i][j]);
             }else{
                 printf("%c", area[i][j]);
             }
         }
     }printf("\n");
-    
 }
-
