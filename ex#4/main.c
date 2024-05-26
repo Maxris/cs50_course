@@ -1,13 +1,8 @@
 #include <stdio.h>
-
-#define MAX_COL 2
-#define MAX_ROWS 2
-
-#define MAX_J MAX_COL * 2
-#define MAX_I MAX_ROWS * 2
-
+#include "game.h"
 int main(void)
 {
+    gameManager();
     
     return 0;
 }
