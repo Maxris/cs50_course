@@ -80,7 +80,7 @@ void loopArea(char area[][MAX_J], char *moveComand, int *playerI, int *playerJ)
 {
     switch (*moveComand)
     {
-        case 'q':
+        case 'e':
             printf("Bye !\n");
             break;
 
@@ -88,7 +88,7 @@ void loopArea(char area[][MAX_J], char *moveComand, int *playerI, int *playerJ)
             moveUp(area, playerI, playerJ);
             break;
 
-        case 'd':
+        case 's':
             moveDown(area, playerI, playerJ);
             break;
 
@@ -104,6 +104,28 @@ void loopArea(char area[][MAX_J], char *moveComand, int *playerI, int *playerJ)
             printf("incorrect comand !\n");
             break;
     }
+}
+
+////////////////////////////////////////////////////////////
+
+void moveUp(char area[][MAX_J], int *playerI, int *playerJ)
+{
+
+}
+
+void moveDown(char area[][MAX_J], int *playerI, int *playerJ)
+{
+
+}
+
+void moveLeft(char area[][MAX_J], int *playerI, int *playerJ)
+{
+
+}
+
+void moveRight(char area[][MAX_J], int *playerI, int *playerJ)
+{
+    
 }
 
 ////////////////////////////////////////////////////////////
