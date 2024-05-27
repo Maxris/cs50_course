@@ -67,7 +67,7 @@ void displayArea(char area[][MAX_J])
 void displayMenu(char *moveComand)
 {
     printf("move the 'T':\n");
-    printf("z : up\n" "s : down\n" "q : left\n" " d : right\n" "q: quit\n");
+    printf("z : up\n" "s : down\n" "q : left\n" " d : right\n" "e : quit\n");
     printf(">");
     scanf("%c", moveComand);
     flushBuffer();
@@ -84,7 +84,23 @@ void loopArea(char area[][MAX_J], char *moveComand, int *playerI, int *playerJ)
             printf("Bye !\n");
             break;
 
-        deflault:
+        case 'u':
+            moveUp(area, playerI, playerJ);
+            break;
+
+        case 'd':
+            moveDown(area, playerI, playerJ);
+            break;
+
+        case 'q':
+            moveLeft(area, playerI, playerJ);
+            break;
+
+        case 'd':
+            moveRight(area, playerI, playerJ);
+            break;
+
+        default:
             printf("incorrect comand !\n");
             break;
     }
