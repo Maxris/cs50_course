@@ -14,9 +14,11 @@
 //-----prototypes-----
 
 void gameManager(void);
-void areaInitialisation( char area[][MAX_J], int *playerI, int *playerJ);
+void areaInitialisation(char area[][MAX_J], int *playerI, int *playerJ);
 void displayArea(char area[][MAX_J]);
 void displayMenu(char *moveComand);
+void flushBuffer(void);
+void loopArea(char area[][MAX_J], char *moveComand, int *playerI, int *playerJ);
 
 //////////////////////////////////////
 

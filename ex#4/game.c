@@ -11,7 +11,14 @@ void gameManager(void)
     int *playerJ = &TJ;
 
     areaInitialisation(area, playerI, playerJ);
-    displayArea(area);
+    
+    while (*moveComand != 'q')
+    {
+        displayArea(area);
+        displayMenu(moveComand);
+        loopArea(area, moveComand, playerI, playerJ);
+    }
+
 }
 
 
@@ -57,9 +64,41 @@ void displayArea(char area[][MAX_J])
 
 ////////////////////////////////////////////////////////////
 
-void displayMenu(char *moveComand){
+void displayMenu(char *moveComand)
+{
     printf("move the 'T':\n");
-    printf("z : up\n" "s : down\n" "q : left\n" " d : right\n");
+    printf("z : up\n" "s : down\n" "q : left\n" " d : right\n" "q: quit\n");
     printf(">");
     scanf("%c", moveComand);
+    flushBuffer();
+}
+
+////////////////////////////////////////////////////////////
+
+
+void loopArea(char area[][MAX_J], char *moveComand, int *playerI, int *playerJ)
+{
+    switch (*moveComand)
+    {
+        case 'q':
+            printf("Bye !\n");
+            break;
+
+        deflault:
+            printf("incorrect comand !\n");
+            break;
+    }
+}
+
+////////////////////////////////////////////////////////////
+
+
+void flushBuffer(void)
+{
+    int c = 0;
+    while (c != '\n' && c != EOF)
+    {
+        c = getchar();
+    }
+    
 }
