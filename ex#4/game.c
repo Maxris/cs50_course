@@ -67,7 +67,7 @@ void displayArea(char area[][MAX_J])
 void displayMenu(char *moveComand)
 {
     printf("move the 'T':\n");
-    printf("z : up\n" "s : down\n" "q : left\n" " d : right\n" "e : quit\n");
+    printf("z : up\n" "s : down\n" "q : left\n" "d : right\n" "e : quit\n");
     printf(">");
     scanf("%c", moveComand);
     flushBuffer();
@@ -110,22 +110,51 @@ void loopArea(char area[][MAX_J], char *moveComand, int *playerI, int *playerJ)
 
 void moveUp(char area[][MAX_J], int *playerI, int *playerJ)
 {
+    if(*playerJ == 1)
+    {
+        return;
+
+    area[*playerI][*playerJ] = ' ';
+    (*playerJ)--;
+    area[*playerI][*playerJ] = 'T';
+    }
 
 }
 
 void moveDown(char area[][MAX_J], int *playerI, int *playerJ)
 {
+    if(*playerI == MAX_I - 2)
+    {
+        return;
 
+    area[*playerI][*playerJ] = ' ';
+    (*playerI)++;
+    area[*playerI][*playerJ] = 'T';
+    }
 }
 
 void moveLeft(char area[][MAX_J], int *playerI, int *playerJ)
 {
+ if(*playerJ == 1)
+    {
+        return;
 
+    area[*playerI][*playerJ] = ' ';
+    (*playerJ)--;
+    area[*playerI][*playerJ] = 'T';
+    }
 }
 
 void moveRight(char area[][MAX_J], int *playerI, int *playerJ)
 {
-    
+    if(*playerJ == MAX_J - 2)
+    {
+        return;
+
+    area[*playerI][*playerJ] = ' ';
+    (*playerI)++;
+    area[*playerI][*playerJ] = 'T';
+    }
 }
 
 ////////////////////////////////////////////////////////////
