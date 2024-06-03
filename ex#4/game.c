@@ -108,7 +108,7 @@ void loopArea(char area[][MAX_J], char *moveComand, int *playerI, int *playerJ)
     }
 }
 
-////////////////////////////////////////////////////////////
+/*--------------------T control commands--------------------*/
 
 void moveUp(char area[][MAX_J], int *playerI, int *playerJ)
 {
